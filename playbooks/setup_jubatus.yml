@@ -1,4 +1,4 @@
-- hosts: jubutus
+- hosts: jubatus
   sudo: yes
   vars:
     source_list_file: /etc/apt/sources.list.d/jubatus.list

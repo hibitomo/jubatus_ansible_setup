@@ -1,0 +1,9 @@
+- include: setup_jubatus.yml
+- hosts: jubatus
+  sudo: no
+  vars:
+    zookeeper_tar: zookeeper-3.4.6.tar.gz
+    zookeeper_dir: zookeeper-3.4.6
+  tasks: 
+    - get_url: url=http://ftp.meisei-u.ac.jp/mirror/apache/dist/zookeeper/stable/{{ zookeeper_tar }} dest={{ zookeeper_tar }}
+    - shell: tar xvf {{ zookeeper_tar }} creates={{ zookeeper_dir }}
