@@ -1,6 +1,8 @@
 # jubatus_setup
 
-## ansible install
+Jubatus playbooks for Ubuntu.
+
+## Ansible Install
 
 ```
 $ sudo apt-get install software-properties-common
@@ -9,7 +11,9 @@ $ sudo apt-get update
 $ sudo apt-get install ansible
 ```
 
-## setup jubatus
+And the ansible host should have SSH access available to remote hosts, based on SSH-Key.
+
+## Setup Jubatus
 
 ### Download
 
@@ -32,7 +36,8 @@ $ cat ./hosts
 
 ### Deploy
 
-- `-u`: user name in remote host
+- `-i`: Inventory file
+- `-u`: User name in remote host
 - `-K`: Prompt for the password to use with sudo
 
 example
