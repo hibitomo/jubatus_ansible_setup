@@ -1,4 +1,4 @@
-- include: setup_jubatus.yml
+- include: jubatus.yml
 - hosts: jubatus
   sudo: no
   vars:
