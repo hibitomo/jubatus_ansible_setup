@@ -1,0 +1,6 @@
+- hosts: jubatus-client
+  sudo: yes
+  tasks:
+    - apt: name=python-setuptools update_cache=yes force=yes
+    - easy_install: name=pip
+    - pip: name=jubatus state=latest

@@ -1,0 +1,9 @@
+- hosts: jubutus
+  sudo: yes
+  vars:
+    source_list_file: /etc/apt/sources.list.d/jubatus.list
+  tasks:
+    - shell: echo "deb http://download.jubat.us/apt binary/" >> {{source_list_file}}
+      args:
+        creates: "{{source_list_file}}"
+    - apt: name=jubatus update_cache=yes force=yes
